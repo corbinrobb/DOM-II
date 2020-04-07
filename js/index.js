@@ -82,3 +82,17 @@ const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(e => {
   e.addEventListener('click', e => e.preventDefault());
 });
+
+
+
+imgs.forEach(img => {
+  img.addEventListener('click', function (e) {
+    gsap.to(img, { duration: 2, scale: 1.3 });
+  });
+});
+
+imgs.forEach(img => {
+  img.addEventListener('dblclick', function (e) {
+    gsap.to(img, { duration: 2, scale: 1 });
+  });
+});
