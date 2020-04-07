@@ -1,17 +1,5 @@
 // Your code goes here
 
-// mouseover
-// keydown
-// wheel
-// drag / drop
-// load
-// focus
-// resize
-// scroll
-// select
-// dblclick
-
-
 const funBusImg = document.querySelector('.intro img');
 
 // 1 dblclick
@@ -84,4 +72,13 @@ imgs.forEach(img => {
   img.addEventListener('contextmenu', function(e) {
     e.target.style.visibility = 'hidden';
   });
+});
+
+
+
+// Add event listener to remove default action
+const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(e => {
+  e.addEventListener('click', e => e.preventDefault());
 });
